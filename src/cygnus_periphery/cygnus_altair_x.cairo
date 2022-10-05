@@ -462,7 +462,7 @@ func convert_dai_to_lp_tokens{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, ra
     if ((_dai - token0) * (_dai - token1) == 0) {
         // One of them is DAI, find which one
         if (_dai == token0) {
-            // Token 0 is DAI, then assign token_a = DAI
+            // Token 0 is DAI, then assign token_a = token0
             assert (token_a, token_b) = (token0, token1);
 
             // Avoid `if` revoke
@@ -470,7 +470,7 @@ func convert_dai_to_lp_tokens{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, ra
             tempvar pedersen_ptr = pedersen_ptr;
             tempvar range_check_ptr = range_check_ptr;
         } else {
-            // Token 1 is DAI, then assign token_b = DAI
+            // Token 1 is DAI, then assign token_a = token1
             assert (token_a, token_b) = (token1, token0);
 
             // Avoid `if` revoke
