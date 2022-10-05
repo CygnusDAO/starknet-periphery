@@ -485,15 +485,15 @@ func convert_dai_to_lp_tokens{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, ra
         swap_tokens_internal(token_in=_dai, token_out=_native_token, amount_in=dai_amount);
 
         //
-        // 3. Check if token0 or token1 from the LP is WETH, if so assign and exit loop
+        // 3. Check if token0 or token1 from the LP is WETH and assign token_a to WETH
         //
         if ((_native_token - token0) * (_native_token - token1) == 0) {
             // One of them is WETH, find which one
             if (_native_token == token0) {
-                // Token0 is WETH, then assign token_a = WETH
+                // Token0 is WETH, assign token_a = token0
                 assert (token_a, token_b) = (token0, token1);
             } else {
-                // Token1 is WETH, assign token_b = WETH
+                // Token1 is WETH, assign token_a = token1
                 assert (token_a, token_b) = (token1, token0);
             }
 
