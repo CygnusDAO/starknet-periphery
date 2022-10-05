@@ -2,12 +2,12 @@
 
 Allows users to interact with Cygnus Core contracts to:
 
--   Minting CygLP and CygDAI
--   Redeeming CygLP and CygDAI
--   Borrowing DAI
--   Repaying DAI
--   Leveraging LP Tokens
--   Deleveraging LP Tokens
+-   Mint CygLP and CygDAI
+-   Redeem CygLP and CygDAI
+-   Borrow DAI
+-   Repay DAI
+-   Leverage LP Tokens
+-   Deleverage LP Tokens
 
  <hr/>
 
