@@ -15,7 +15,7 @@ Allows users to interact with Cygnus Core contracts to:
 
 ```
 // @notice For leverage functionality only
-// @notice This function gets called after calling `borrow` on Borrow contract and having `amountUsdc` of USDC
+// @notice This function gets called after calling `borrow` on Borrow contract and having `amountDai` of DAI
 // @param lp_token_pair The address of the LP Token
 // @param token0 The address of token0 from the LP Token
 // @param token1 The address of token1 from the LP Token
