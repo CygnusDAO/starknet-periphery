@@ -66,7 +66,7 @@ func liquidate{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
 
 ```
 
-The `liquidate` function will send DAI back to the borrow contract and call the `seizeCygLP` function on the collateral contract, increasing the liquidator's collateral balance (LP Token) by the liquidated amount PLUS the `liquidationIncentive` (Default is 5%) and decrease the collateral balance (LP Token) of the user being liquidated. The router first transfers `amountMax` of DAI from the liquidator to the borrow contract (it checks if amountMax is more than borrower's total borrow balance, if so, then just returns borrow balance) and then will liquidate the `borrower` address.
+The `liquidate` function will send DAI back to the borrow contract and call the `seize_cyg_lp` function on the collateral contract, increasing the liquidator's collateral balance (LP Token) by the liquidated amount PLUS the `liquidation_incentive` (Default is 2.5%) and decrease the collateral balance (LP Token) of the user being liquidated. The router first transfers `amount_max` of DAI from the liquidator to the borrow contract (it checks if amountMax is more than borrower's total borrow balance, if so, then just returns borrow balance) and then will liquidate the `borrower` address.
 
 The liquidator has CygLP in their wallet which can be redeemed at any time for the underlying LP Token.
 
